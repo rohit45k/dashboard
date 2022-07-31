@@ -3,6 +3,10 @@
   justify-content: space-between;
   gap: 2rem;
 
+  &:hover {
+    transform: scale(1.1);
+  }
+
   .left {
     display: flex;
     flex-direction: column;

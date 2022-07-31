@@ -8,6 +8,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import Revenue from '../../components/featured/revenue/Revenue';
 import Chart from '../../components/featured/chart/Chart';
+import UserList from '../../components/featured/users/UserList';
 
 const DUMMY_WIDGET_DATA = [
   {
@@ -62,6 +63,7 @@ const Home = () => {
         <Revenue />
         <Chart />
       </section>
+      <UserList />
     </div>
   );
 };
