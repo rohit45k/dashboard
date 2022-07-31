@@ -1,11 +1,10 @@
 .home {
   min-height: 100vh;
 
-  .title {
-    height: 100vh;
-    font-size: 48px;
+  .widgets {
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    gap: 1.25rem;
   }
 }
