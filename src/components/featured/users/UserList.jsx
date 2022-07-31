@@ -25,7 +25,7 @@ const DUMMY_USERS = [
     customer: 'Michael Doe',
     date: '1 March',
     amount: 900,
-    method: 'Online Payment',
+    method: 'Online',
     status: 'Pending',
   },
   {
@@ -79,7 +79,7 @@ const UserList = () => {
         <TableBody>
           {DUMMY_USERS.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell>{row.id}</TableCell>

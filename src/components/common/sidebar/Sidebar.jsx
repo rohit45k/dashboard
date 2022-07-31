@@ -12,6 +12,8 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
+import { NavLink } from 'react-router-dom';
+
 const Sidebar = () => {
   return (
     <aside className={classes.sidebar}>
@@ -23,55 +25,115 @@ const Sidebar = () => {
         <ul>
           <p className={classes.title}>MAIN</p>
           <li>
-            <DashboardIcon />
-            <span>Dashboard</span>
+            <NavLink
+              to='/'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <DashboardIcon />
+              <span>Dashboard</span>
+            </NavLink>
           </li>
           <li>
-            <PeopleAltIcon />
-            <span>Users</span>
+            <NavLink
+              to='/users'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <PeopleAltIcon />
+              <span>Users</span>
+            </NavLink>
           </li>
           <p className={classes.title}>SHOP</p>
           <li>
-            <AddBusinessIcon />
-            <span>Products</span>
+            <NavLink
+              to='/products'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <AddBusinessIcon />
+              <span>Products</span>
+            </NavLink>
           </li>
           <li>
-            <CreditCardIcon />
-            <span>Orders</span>
+            <NavLink
+              to='/orders'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <CreditCardIcon />
+              <span>Orders</span>
+            </NavLink>
           </li>
           <li>
-            <LocalShippingIcon />
-            <span>Delivery</span>
+            <NavLink
+              to='/delivery'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <LocalShippingIcon />
+              <span>Delivery</span>
+            </NavLink>
           </li>
           <p className={classes.title}>ADMIN</p>
           <li>
-            <AssessmentIcon />
-            <span>Stats</span>
+            <NavLink
+              to='/stats'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <AssessmentIcon />
+              <span>Stats</span>
+            </NavLink>
           </li>
           <li>
-            <NotificationsActiveIcon />
-            <span>Notifications</span>
+            <NavLink
+              to='/notifications'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <NotificationsActiveIcon />
+              <span>Notifications</span>
+            </NavLink>
           </li>
           <li>
-            <DnsIcon />
-            <span>System</span>
+            <NavLink
+              to='/system'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <DnsIcon />
+              <span>System</span>
+            </NavLink>
           </li>
           <li>
-            <DocumentScannerIcon />
-            <span>Logs</span>
+            <NavLink
+              to='/logs'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <DocumentScannerIcon />
+              <span>Logs</span>
+            </NavLink>
           </li>
           <li>
-            <SettingsIcon />
-            <span>Settings</span>
+            <NavLink
+              to='/settings'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <SettingsIcon />
+              <span>Settings</span>
+            </NavLink>
           </li>
           <p className={classes.title}>USER</p>
           <li>
-            <AccountCircleIcon />
-            <span>Profile</span>
+            <NavLink
+              to='/profile'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <AccountCircleIcon />
+              <span>Profile</span>
+            </NavLink>
           </li>
           <li>
-            <ExitToAppIcon />
-            <span>Logout</span>
+            <NavLink
+              to='/logout'
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              <ExitToAppIcon />
+              <span>Logout</span>
+            </NavLink>
           </li>
         </ul>
       </nav>
