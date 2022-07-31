@@ -6,6 +6,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import Revenue from '../../components/featured/revenue/Revenue';
+import Chart from '../../components/featured/chart/Chart';
 
 const DUMMY_WIDGET_DATA = [
   {
@@ -56,6 +58,10 @@ const Home = () => {
   return (
     <div className={classes.home}>
       <section className={classes.widgets}>{widgets}</section>
+      <section className={classes.featured}>
+        <Revenue />
+        <Chart />
+      </section>
     </div>
   );
 };

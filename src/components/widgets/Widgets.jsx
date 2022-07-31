@@ -16,7 +16,7 @@ const Widgets = ({ widget }) => {
         <div className={classes.left}>
           <span className={classes.title}>{widget.title}</span>
           <span className={classes.counter}>
-            {widget?.money && '$'}
+            {widget?.money && '$ '}
             {widget.counter}
           </span>
           <span className={classes.link}>See details</span>

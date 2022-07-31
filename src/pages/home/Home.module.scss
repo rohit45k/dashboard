@@ -1,10 +1,15 @@
 .home {
   min-height: 100vh;
 
-  .widgets {
+  .widgets,
+  .featured {
     padding: 20px;
     display: flex;
     justify-content: space-around;
     gap: 1.25rem;
+  }
+
+  .featured {
+    justify-content: space-between;
   }
 }
