@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  transition: all 250ms ease-in;
 
   &:hover {
     transform: scale(1.1);
