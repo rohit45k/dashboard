@@ -36,10 +36,10 @@ const data = [
   },
 ];
 
-const Chart = () => {
+const Chart = ({ title }) => {
   return (
     <div className={classes.chart}>
-      <h3>Last 6 months revenue</h3>
+      <h3>{title}</h3>
       <ResponsiveContainer width='100%'>
         <AreaChart
           data={data}

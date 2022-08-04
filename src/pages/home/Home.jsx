@@ -61,7 +61,7 @@ const Home = () => {
       <section className={classes.widgets}>{widgets}</section>
       <section className={classes.featured}>
         <Revenue />
-        <Chart />
+        <Chart title='Last 6 months revenue' />
       </section>
       <UserList />
     </div>
