@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { userInputs, productInputs } from './data/formInputs';
 
 import Layout from './components/Layout/Layout';
 import Home from './pages/home/Home';
@@ -21,12 +22,18 @@ function App() {
           <Route path='/users'>
             <Route index element={<Users />} />
             <Route path=':userId' element={<SingleUser />} />
-            <Route path='new' element={<NewUser />} />
+            <Route
+              path='new'
+              element={<NewUser title='Add New User' inputs={userInputs} />}
+            />
           </Route>
           <Route path='/products'>
             <Route index element={<Users />} />
             <Route path=':productId' element={<SingleUser />} />
-            <Route path='new' element={<NewUser />} />
+            <Route
+              path='new'
+              element={<NewUser title='Add New User' inputs={productInputs} />}
+            />
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>

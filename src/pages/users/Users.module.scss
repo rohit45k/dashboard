@@ -1,6 +1,4 @@
 .users {
-  height: 85vh;
-
   .user {
     display: flex;
     gap: 1rem;
@@ -12,30 +10,33 @@
     }
   }
 
-  .status {
+  .pending,
+  .active,
+  .passive {
     text-transform: capitalize;
     padding: 0.2rem 0.3rem;
     border-radius: 5px;
-
-    &.pending {
-      color: rgb(190, 162, 33);
-      background-color: rgba(238, 202, 44, 0.3);
-    }
-    &.active {
-      color: rgb(50, 204, 36);
-      background-color: rgba(60, 238, 44, 0.3);
-    }
-    &.passive {
-      color: rgb(238, 60, 44);
-      background-color: rgba(238, 60, 44, 0.3);
-    }
+  }
+  .pending {
+    color: rgb(190, 162, 33);
+    background-color: rgba(238, 202, 44, 0.3);
+  }
+  .active {
+    color: rgb(50, 204, 36);
+    background-color: rgba(60, 238, 44, 0.3);
+  }
+  .passive {
+    color: rgb(238, 60, 44);
+    background-color: rgba(238, 60, 44, 0.3);
   }
 
   .btnGroup {
     display: flex;
     gap: 1rem;
 
-    button {
+    button,
+    a {
+      text-decoration: none;
       padding: 0.2rem 0.3rem;
       border-radius: 5px;
       outline: none;
