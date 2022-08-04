@@ -1,4 +1,5 @@
 import classes from '../pages/users/Users.module.scss';
+import { Link } from 'react-router-dom';
 
 export const userColumns = [
   {
@@ -52,6 +53,23 @@ export const userColumns = [
         <p className={`${classes.status} ${classes[className]}`}>
           {params.row.status}
         </p>
+      );
+    },
+  },
+  {
+    field: 'actions',
+    headerName: 'Actions',
+    width: 200,
+    renderCell: (params) => {
+      return (
+        <div className={classes.btnGroup}>
+          <div className={classes.btnGroup}>
+            <Link to={`${params.row.id}`} className={classes.view}>
+              View
+            </Link>
+            <button className={classes.delete}>Delete</button>
+          </div>
+        </div>
       );
     },
   },

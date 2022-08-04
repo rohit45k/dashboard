@@ -35,7 +35,9 @@
     display: flex;
     gap: 1rem;
 
+    a,
     button {
+      text-decoration: none;
       padding: 0.2rem 0.3rem;
       border-radius: 5px;
       outline: none;

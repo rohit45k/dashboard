@@ -20,12 +20,12 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/users'>
             <Route index element={<Users />} />
-            <Route path=':userId' element={<SingleUser />} />
+            <Route path=':qId' element={<SingleUser />} />
             <Route path='new' element={<NewUser />} />
           </Route>
           <Route path='/products'>
             <Route index element={<Users />} />
-            <Route path=':productId' element={<SingleUser />} />
+            <Route path=':qId' element={<SingleUser />} />
             <Route path='new' element={<NewUser />} />
           </Route>
           <Route path='*' element={<NotFound />} />

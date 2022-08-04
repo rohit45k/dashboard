@@ -1,11 +1,27 @@
+import { useState, useEffect, useCallback } from 'react';
+import { useParams } from 'react-router-dom';
 import Card from '../../components/UI/Card';
 import classes from './SingleUser.module.scss';
-
+import { userRows } from '../../data/users';
 import EditIcon from '@mui/icons-material/Edit';
 import Chart from '../../components/featured/chart/Chart';
 import UserList from '../../components/featured/users/UserList';
 
 const SingleUser = () => {
+  const { qId } = useParams();
+  const queryId = +qId;
+
+  const [userInfo, setUserInfo] = useState({});
+
+  const setUser = useCallback(() => {
+    const user = userRows.find((u) => u.id === queryId);
+    setUserInfo(user);
+  }, [queryId]);
+
+  useEffect(() => {
+    setUser();
+  }, [setUser]);
+
   return (
     <div className={classes.single}>
       <div className={classes.top}>
@@ -15,16 +31,16 @@ const SingleUser = () => {
             <EditIcon className={classes.editBtn} />
           </div>
           <div className={classes.left}>
-            <img
-              src='https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
-              alt='Avatar'
-            />
+            <img src={userInfo?.img} alt='Avatar' />
             <div className={classes.info}>
               <p>
-                Name: <span>Jane Doe</span>
+                Name: <span>{userInfo?.username}</span>
               </p>
               <p>
-                Email: <span>jane@gmail.com</span>
+                Email: <span>{userInfo?.email}</span>
+              </p>
+              <p>
+                Age: <span>{userInfo?.age}</span>
               </p>
               <p>
                 Phone: <span>+91 3256 325 468</span>
