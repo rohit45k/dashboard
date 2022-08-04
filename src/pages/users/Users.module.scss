@@ -1,6 +1,27 @@
 .users {
   height: 85vh;
 
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      border: 1px solid rgb(0, 128, 128);
+      color: rgb(0, 128, 128);
+      background-color: rgba(0, 128, 128, 0.3);
+      padding: 0.2rem 0.3rem;
+      border-radius: 4px;
+    }
+  }
+
   .user {
     display: flex;
     gap: 1rem;
