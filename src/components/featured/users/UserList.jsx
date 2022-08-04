@@ -62,7 +62,10 @@ const DUMMY_USERS = [
 
 const UserList = () => {
   return (
-    <TableContainer component={Paper} className={classes.users}>
+    <TableContainer
+      component={Paper}
+      className={`${classes.users} ${classes.dark}`}
+    >
       <h3>Last 5 Transactions</h3>
       <Table sx={{ minWidth: 650 }} aria-label='Users Table'>
         <TableHead>

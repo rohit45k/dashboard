@@ -16,7 +16,7 @@ import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <aside className={classes.sidebar}>
+    <aside className={`${classes.sidebar} ${classes.dark}`}>
       <div className={classes['logo-wrapper']}>
         <span className={classes.logo}>Dashboard</span>
       </div>

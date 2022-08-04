@@ -1,4 +1,6 @@
 .users {
+  padding: 20px;
+
   .user {
     display: flex;
     gap: 1rem;
@@ -50,6 +52,43 @@
       &.delete {
         color: crimson;
         background-color: rgba(255, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &.dark {
+    color: #999999;
+    background-color: #444444;
+
+    th,
+    td {
+      color: #999999;
+    }
+
+    .pending {
+      color: rgb(230, 199, 64);
+      background-color: transparent;
+    }
+    .active {
+      color: rgb(67, 219, 53);
+      background-color: transparent;
+    }
+    .passive {
+      color: rgb(241, 111, 99);
+      background-color: transparent;
+    }
+
+    .btnGroup {
+      button,
+      a {
+        &.view {
+          color: rgb(117, 117, 252);
+          background-color: transparent;
+        }
+        &.delete {
+          color: rgb(245, 68, 103);
+          background-color: transparent;
+        }
       }
     }
   }

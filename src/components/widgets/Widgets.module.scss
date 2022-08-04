@@ -60,4 +60,12 @@
       color: red;
     }
   }
+
+  &.dark {
+    color: #999999;
+
+    .link {
+      border-color: #5f9eda;
+    }
+  }
 }

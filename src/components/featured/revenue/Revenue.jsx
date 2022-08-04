@@ -10,7 +10,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const Revenue = () => {
   return (
-    <div className={classes.revenue}>
+    <div className={`${classes.revenue} ${classes.dark}`}>
       <Card>
         <div className={classes.title}>
           <h3>Total Revenue</h3>

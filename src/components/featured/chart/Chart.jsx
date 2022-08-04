@@ -38,7 +38,7 @@ const data = [
 
 const Chart = ({ title }) => {
   return (
-    <div className={classes.chart}>
+    <div className={`${classes.chart} ${classes.dark}`}>
       <h3>{title}</h3>
       <ResponsiveContainer width='100%'>
         <AreaChart

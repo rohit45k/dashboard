@@ -12,7 +12,7 @@ const Widgets = ({ widget }) => {
 
   return (
     <Card>
-      <div className={classes.widget}>
+      <div className={`${classes.widget} ${classes.dark}`}>
         <div className={classes.left}>
           <span className={classes.title}>{widget.title}</span>
           <span className={classes.counter}>

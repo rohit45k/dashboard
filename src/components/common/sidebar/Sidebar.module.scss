@@ -81,4 +81,12 @@
       }
     }
   }
+
+  &.dark {
+    background-color: #444444;
+
+    .theme {
+      background-color: #444444;
+    }
+  }
 }

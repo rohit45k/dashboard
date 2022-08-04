@@ -10,4 +10,12 @@
   .chartGrid {
     stroke: #bbbbbb;
   }
+
+  &.dark {
+    color: #999999;
+
+    .chartGrid {
+      stroke: #666666;
+    }
+  }
 }

@@ -11,7 +11,10 @@ import { userRows } from '../../data/users';
 
 const Users = () => {
   return (
-    <TableContainer component={Paper} className={classes.users}>
+    <TableContainer
+      component={Paper}
+      className={`${classes.users} ${classes.dark}`}
+    >
       <h3>All Users</h3>
       <Table sx={{ minWidth: 650 }} aria-label='Users Table'>
         <TableHead>

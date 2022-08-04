@@ -5,7 +5,7 @@ import classes from './Layout.module.scss';
 
 const Layout = (props) => {
   return (
-    <section className={classes.layout}>
+    <section className={`${classes.layout} ${classes.dark}`}>
       <Sidebar />
       <section className={classes.main}>
         <Navbar />
