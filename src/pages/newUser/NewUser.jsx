@@ -1,12 +1,16 @@
+import { useContext } from 'react';
+import ThemeContext from '../../store/context';
 import classes from './NewUser.module.scss';
 import DriveFolderUploadOutlinedIcon from '@mui/icons-material/DriveFolderUploadOutlined';
 import { useState } from 'react';
 
 const NewUser = ({ title, inputs }) => {
+  const themeCtx = useContext(ThemeContext);
+
   const [file, setFile] = useState('');
 
   return (
-    <div className={`${classes.new} ${classes.dark}`}>
+    <div className={`${classes.new} ${themeCtx.dark && classes.dark}`}>
       <div className={classes.top}>
         <div className={classes.left}>
           <h1>{title}</h1>

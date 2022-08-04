@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../../store/context';
 import classes from './Chart.module.scss';
 import {
   AreaChart,
@@ -37,8 +39,10 @@ const data = [
 ];
 
 const Chart = ({ title }) => {
+  const themeCtx = useContext(ThemeContext);
+
   return (
-    <div className={`${classes.chart} ${classes.dark}`}>
+    <div className={`${classes.chart} ${themeCtx.dark && classes.dark}`}>
       <h3>{title}</h3>
       <ResponsiveContainer width='100%'>
         <AreaChart

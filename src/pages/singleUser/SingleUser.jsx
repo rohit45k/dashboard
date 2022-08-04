@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../store/context';
 import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import Card from '../../components/UI/Card';
@@ -8,6 +10,8 @@ import Chart from '../../components/featured/chart/Chart';
 import UserList from '../../components/featured/users/UserList';
 
 const SingleUser = () => {
+  const themeCtx = useContext(ThemeContext);
+
   const { qId } = useParams();
   const queryId = +qId;
 
@@ -23,7 +27,7 @@ const SingleUser = () => {
   }, [setUser]);
 
   return (
-    <div className={`${classes.single} ${classes.dark}`}>
+    <div className={`${classes.single} ${themeCtx.dark && classes.dark}`}>
       <div className={classes.top}>
         <Card>
           <div className={classes.title}>

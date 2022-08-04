@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../../store/context';
 import classes from './Navbar.module.scss';
 import userAvatar from '../../../assets/user-avatar.jpg';
 
@@ -8,10 +10,17 @@ import CropFreeOutlinedIcon from '@mui/icons-material/CropFreeOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
 const Navbar = () => {
+  const themeCtx = useContext(ThemeContext);
+
+  const toggleTheme = () => {
+    themeCtx.switchTheme();
+  };
+
   return (
-    <div className={`${classes.navbar} ${classes.dark}`}>
+    <div className={`${classes.navbar} ${themeCtx.dark && classes.dark}`}>
       <div className={classes.search}>
         <input type='text' placeholder='Search...' />
         <SearchIcon className={classes.icon} />
@@ -21,8 +30,8 @@ const Navbar = () => {
           <LanguageIcon />
           <span>Language</span>
         </li>
-        <li>
-          <DarkModeOutlinedIcon />
+        <li onClick={toggleTheme}>
+          {themeCtx.dark ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
         </li>
         <li>
           <CropFreeOutlinedIcon />

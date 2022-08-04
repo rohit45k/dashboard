@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../../store/context';
 import classes from './UserList.module.scss';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -61,10 +63,12 @@ const DUMMY_USERS = [
 ];
 
 const UserList = () => {
+  const themeCtx = useContext(ThemeContext);
+
   return (
     <TableContainer
       component={Paper}
-      className={`${classes.users} ${classes.dark}`}
+      className={`${classes.users} ${themeCtx.dark && classes.dark}`}
     >
       <h3>Last 5 Transactions</h3>
       <Table sx={{ minWidth: 650 }} aria-label='Users Table'>

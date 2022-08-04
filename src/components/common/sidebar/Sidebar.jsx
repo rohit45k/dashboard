@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../../store/context';
 import classes from './Sidebar.module.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
@@ -15,8 +17,18 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
+  const themeCtx = useContext(ThemeContext);
+
+  const switchToDark = () => {
+    themeCtx.switchDarkTheme();
+  };
+
+  const switchToLight = () => {
+    themeCtx.switchLightTheme();
+  };
+
   return (
-    <aside className={`${classes.sidebar} ${classes.dark}`}>
+    <aside className={`${classes.sidebar} ${themeCtx.dark && classes.dark}`}>
       <div className={classes['logo-wrapper']}>
         <span className={classes.logo}>Dashboard</span>
       </div>
@@ -140,8 +152,14 @@ const Sidebar = () => {
       <div className={classes.theme}>
         <p>Choose Theme</p>
         <div className={classes.buttons}>
-          <button className={`${classes.btn} ${classes.dark}`}></button>
-          <button className={`${classes.btn} ${classes.light}`}></button>
+          <button
+            onClick={switchToDark}
+            className={`${classes.btn} ${classes.dark}`}
+          ></button>
+          <button
+            onClick={switchToLight}
+            className={`${classes.btn} ${classes.light}`}
+          ></button>
         </div>
       </div>
     </aside>
