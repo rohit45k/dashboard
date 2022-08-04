@@ -1,0 +1,43 @@
+.single {
+  .top {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+
+      .editBtn {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        background-color: #cecece;
+        padding: 0.25rem;
+        border-radius: 5px;
+      }
+    }
+    .left {
+      display: flex;
+      gap: 1rem;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+      }
+
+      .info {
+        p {
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+  }
+
+  &.dark {
+    color: #999999;
+  }
+}

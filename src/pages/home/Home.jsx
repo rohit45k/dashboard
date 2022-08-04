@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../store/context';
 import classes from './Home.module.scss';
 
 import Widgets from '../../components/widgets/Widgets';
@@ -52,16 +54,18 @@ const DUMMY_WIDGET_DATA = [
 ];
 
 const Home = () => {
+  const themeCtx = useContext(ThemeContext);
+
   const widgets = DUMMY_WIDGET_DATA.map((widget) => (
     <Widgets key={widget.id} widget={widget} />
   ));
 
   return (
-    <div className={classes.home}>
+    <div className={`${classes.home} ${themeCtx.dark && classes.dark}`}>
       <section className={classes.widgets}>{widgets}</section>
       <section className={classes.featured}>
         <Revenue />
-        <Chart />
+        <Chart title='Last 6 months revenue' />
       </section>
       <UserList />
     </div>

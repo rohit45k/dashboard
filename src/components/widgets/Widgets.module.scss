@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  transition: all 250ms ease-in;
 
   &:hover {
     transform: scale(1.1);
@@ -57,6 +58,14 @@
 
     .negative {
       color: red;
+    }
+  }
+
+  &.dark {
+    color: #999999;
+
+    .link {
+      border-color: #5f9eda;
     }
   }
 }

@@ -66,4 +66,15 @@
       }
     }
   }
+
+  &.dark {
+    color: #aaaaaa;
+
+    .search {
+      input,
+      input::placeholder {
+        color: #aaaaaa;
+      }
+    }
+  }
 }

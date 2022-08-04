@@ -12,4 +12,8 @@
   .featured {
     justify-content: space-between;
   }
+
+  &.dark {
+    color: #999999;
+  }
 }

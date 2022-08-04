@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../store/context';
 import classes from './Widgets.module.scss';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -10,9 +12,12 @@ const Widgets = ({ widget }) => {
     backgroundColor: widget.iconBgColor,
   };
 
+  const themeCtx = useContext(ThemeContext);
+  console.log(themeCtx.dark);
+
   return (
     <Card>
-      <div className={classes.widget}>
+      <div className={`${classes.widget} ${themeCtx.dark && classes.dark}}`}>
         <div className={classes.left}>
           <span className={classes.title}>{widget.title}</span>
           <span className={classes.counter}>

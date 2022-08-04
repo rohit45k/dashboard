@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../../store/context';
 import classes from './Revenue.module.scss';
 
 import { CircularProgressbar } from 'react-circular-progressbar';
@@ -9,8 +11,10 @@ import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const Revenue = () => {
+  const themeCtx = useContext(ThemeContext);
+
   return (
-    <div className={classes.revenue}>
+    <div className={`${classes.revenue} ${themeCtx.dark && classes.dark}`}>
       <Card>
         <div className={classes.title}>
           <h3>Total Revenue</h3>
