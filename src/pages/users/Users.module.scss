@@ -75,4 +75,49 @@
       }
     }
   }
+
+  &.dark {
+    color: #999999;
+
+    div {
+      color: #999999;
+      border: none;
+    }
+
+    .title {
+      a {
+        background-color: transparent;
+      }
+    }
+
+    .status {
+      &.pending {
+        color: rgb(238, 207, 67);
+        background-color: transparent;
+      }
+      &.active {
+        color: rgb(84, 240, 70);
+        background-color: transparent;
+      }
+      &.passive {
+        color: rgb(255, 108, 95);
+        background-color: transparent;
+      }
+    }
+    .btnGroup {
+      a,
+      button {
+        &.view {
+          color: rgb(131, 131, 255);
+          background-color: transparent;
+          border: 1px solid rgb(158, 158, 255);
+        }
+        &.delete {
+          color: rgb(250, 67, 104);
+          background-color: transparent;
+          border: 1px solid rgb(255, 105, 135);
+        }
+      }
+    }
+  }
 }

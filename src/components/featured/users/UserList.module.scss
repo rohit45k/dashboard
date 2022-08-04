@@ -1,6 +1,10 @@
 .users {
   padding: 1.25rem;
 
+  th {
+    font-weight: bold;
+  }
+
   .product-wrapper {
     display: flex;
     gap: 0.5rem;
@@ -22,5 +26,27 @@
     color: green;
     background-color: rgba(0, 255, 0, 0.3);
     padding: 0.2rem 0.3rem;
+  }
+
+  &.dark {
+    background-color: #444444;
+    color: #999999;
+
+    td,
+    th {
+      color: #aaaaaa;
+    }
+
+    .pending {
+      color: rgb(102, 102, 255);
+      background-color: transparent;
+      padding: 0.2rem 0.3rem;
+    }
+
+    .approved {
+      color: rgb(3, 184, 3);
+      background-color: transparent;
+      padding: 0.2rem 0.3rem;
+    }
   }
 }

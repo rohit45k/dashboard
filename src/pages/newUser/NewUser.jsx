@@ -6,7 +6,7 @@ const NewUser = ({ title, inputs }) => {
   const [file, setFile] = useState('');
 
   return (
-    <div className={classes.new}>
+    <div className={`${classes.new} ${classes.dark}`}>
       <div className={classes.top}>
         <div className={classes.left}>
           <h1>{title}</h1>

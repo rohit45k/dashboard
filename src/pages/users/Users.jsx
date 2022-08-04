@@ -5,7 +5,7 @@ import { userRows, userColumns } from '../../data/users';
 
 const Users = () => {
   return (
-    <div className={classes.users}>
+    <div className={`${classes.users} ${classes.dark}`}>
       <div className={classes.title}>
         <h1>All Users</h1>
         <Link to='new'>New User</Link>

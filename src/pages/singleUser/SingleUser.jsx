@@ -23,7 +23,7 @@ const SingleUser = () => {
   }, [setUser]);
 
   return (
-    <div className={classes.single}>
+    <div className={`${classes.single} ${classes.dark}`}>
       <div className={classes.top}>
         <Card>
           <div className={classes.title}>

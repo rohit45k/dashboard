@@ -9,4 +9,10 @@
       padding: 20px;
     }
   }
+
+  &.dark {
+    .main {
+      background-color: #333333;
+    }
+  }
 }

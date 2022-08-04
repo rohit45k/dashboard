@@ -11,7 +11,7 @@ import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 
 const Navbar = () => {
   return (
-    <div className={classes.navbar}>
+    <div className={`${classes.navbar} ${classes.dark}`}>
       <div className={classes.search}>
         <input type='text' placeholder='Search...' />
         <SearchIcon className={classes.icon} />

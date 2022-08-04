@@ -35,6 +35,9 @@
           input {
             width: 100%;
             padding: 0.2rem;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid teal;
           }
           input[type='submit'] {
             padding: 0.5rem 0rem;
@@ -60,6 +63,17 @@
           margin-top: 1.25rem;
           text-align: left;
         }
+      }
+    }
+  }
+
+  &.dark {
+    color: #999999;
+
+    .formInput {
+      input {
+        color: #aaaaaa;
+        background-color: transparent;
       }
     }
   }
